@@ -1,7 +1,7 @@
 # FinedustMonitor
 * Fine dust monitoring device powered by NodeMCU. 
 
-## NodeMCU
+## ESP8266 NodeMCU
 * Board
 
 ## SDS011 Dust Sensor
