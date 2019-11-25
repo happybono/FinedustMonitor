@@ -10,8 +10,8 @@
 ## DS18820 Temperature Sensor (Thermometer)
 * D4 : Data
 
-## Portable Battery
-* KOKIRI A-PACK FIXIE 5 (KP-LS50) 5000mAh
+## KOKIRI A-PACK FIXIE 5 (KP-LS50) Portable Battery
+* 5000mAh
 
 ## Online Synchronization
 * ThingSpeak (https://thingspeak.com/)
