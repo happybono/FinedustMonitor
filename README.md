@@ -1,6 +1,9 @@
 # FinedustMonitor
 * Fine dust monitoring device powered by NodeMCU. 
 
+## NodeMCU
+* Board
+
 ## SDS011 Dust Sensor
 * Soldering required.
 * D1 : TX of SDS011
