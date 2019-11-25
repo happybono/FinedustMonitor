@@ -10,6 +10,10 @@ D3 : Data, D2 : Clock
 ## DS18820 Temperature Sensor (Thermometer)
 D4 : Data
 
+## Portable Battery
+A-sung Y25 5000mAh
+KOKIRI A-PACK FIXIE 5 (KP-LS50) 5000mAh
+
 ## Online Synchronization
 * ThingSpeak (https://thingspeak.com/)
 * Plaive (https://plaive.10make.com/)
