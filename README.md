@@ -11,8 +11,7 @@ D3 : Data, D2 : Clock
 D4 : Data
 
 ## Portable Battery
-A-sung Y25 5000mAh
-KOKIRI A-PACK FIXIE 5 (KP-LS50) 5000mAh
+* KOKIRI A-PACK FIXIE 5 (KP-LS50) 5000mAh
 
 ## Online Synchronization
 * ThingSpeak (https://thingspeak.com/)
