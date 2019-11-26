@@ -21,7 +21,7 @@
 * Dimension : W (62.3 mm) × D (112.0 mm) × H (13.0 mm) 
 * Capacity : 5000 mAh
 
-## Data Synchronization
+## Data Refinement / Synchronization
 * ThingSpeak (https://thingspeak.com/)
 * Plaive (https://plaive.10make.com/)
 
