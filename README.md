@@ -1,8 +1,8 @@
 # FinedustMonitor
 * Fine dust monitoring device powered by NodeMCU. 
 
-## ESP8266 NodeMCU
-* Board
+## Platform
+* ESP8266 NodeMCU
 
 ## SDS011 Dust Sensor
 * Soldering required.
@@ -21,6 +21,9 @@
 * Dimension : W (62.3 mm) × D (112.0 mm) × H (13.0 mm) 
 * Capacity : 5000 mAh
 
-## Online Synchronization
+## Data Synchronization
 * ThingSpeak (https://thingspeak.com/)
 * Plaive (https://plaive.10make.com/)
+
+## Drivers / References
+Please install https://github.com/squix78/esp8266-oled-ssd1306
