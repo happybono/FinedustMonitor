@@ -1,10 +1,10 @@
 # FinedustMonitor
-* Fine dust monitoring device powered by NodeMCU. 
+* Finedust monitoring device powered by NodeMCU. 
 
 ## Specifications
 ### Scenarios
 * Measuring finedust contamination level in the air in a real time and display on a OLED Screen. 
-* Measuring the current temperature
+* Measuring the current temperature.
 * Refining data and synchronize with the web-based cloud services. (e.g. ThingSpeak, Plaive) 
 
 ### Connections
