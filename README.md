@@ -39,9 +39,9 @@
 * Output : DC-5V / 2.1A
 * Capacity : 5000 mAh
 
-### Data Refinement / Synchronization
+## Data Refinement / Synchronization
 * ThingSpeak (https://thingspeak.com/)
 * Plaive (https://plaive.10make.com/)
 
-### Drivers / References
+## Drivers / References
 Please install https://github.com/squix78/esp8266-oled-ssd1306
