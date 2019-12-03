@@ -32,7 +32,7 @@
 * Soldering required.
 * D4 : Data
 
-### Blank EUB-2300C
+### Blank EUB-2300C Portable Battery
 * Micro-USB : Power 
 * Dimension : W (66.4 mm) × D (95.0 mm) × H (6.5 mm) 
 * Input : DC-5V / 0.6A
