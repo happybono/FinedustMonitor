@@ -32,7 +32,7 @@
 * Soldering required.
 * D4 : Data
 
-### KOKIRI A-PACK FIXIE 5 (KP-LS50) Portable Battery
+### Blank EUB-2300C
 * Micro-USB : Power 
 * Dimension : W (66.4 mm) × D (95.0 mm) × H (6.5 mm) 
 * Input : DC-5V / 0.6A
