@@ -1,6 +1,8 @@
 # FinedustMonitor
 * Finedust monitoring device powered by NodeMCU. 
 
+![Final Product](20191212_085317.jpg)
+
 ## Specifications
 ### Scenarios
 * Measuring the finedust contamination level in the air in a real time and display on the OLED Screen. 
