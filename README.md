@@ -1,5 +1,5 @@
 # FinedustMonitor
-* Finedust monitoring device powered by NodeMCU. 
+Finedust monitoring device powered by NodeMCU. 
 
 ![Final Product](20191212_085317.jpg)
 
