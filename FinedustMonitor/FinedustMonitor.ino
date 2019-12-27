@@ -33,7 +33,7 @@ void setup() {
   wifi_ready = connect_ap(ssid, password);
   if (!wifi_ready) nowifi_oled();
 
-  Serial.println("\nDust Sensor Box V1.0, 2019/11/19 HAPPYBONO");
+  Serial.println("\nDust Sensor Box V1.2, 2019/12/25 HAPPYBONO");
 }
 
 void got_dust(int pm25, int pm10) {
