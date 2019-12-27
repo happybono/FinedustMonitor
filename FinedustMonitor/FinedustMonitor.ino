@@ -19,6 +19,7 @@ char* ssid = "";      // WIFI AP SSID
 char* password = "";  // WIFI AP PASSWORD
 const int RATIO = 10;
 boolean wifi_ready;
+String status;
 
 void setup() {
   Serial.begin(9600);
