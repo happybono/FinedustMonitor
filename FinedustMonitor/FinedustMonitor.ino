@@ -54,8 +54,9 @@ void do_interval() {
 unsigned long mark = 0;
 boolean got_interval = false;
   
-void loop() {
+int pm25i, pm10i;
 
+void loop() {
   if (millis() > mark) {
     mark = millis() + INTERVAL;
     got_interval = true;
