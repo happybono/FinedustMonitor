@@ -14,10 +14,15 @@ RunningMedian pm25s = RunningMedian(19);
 RunningMedian pm10s = RunningMedian(19);
 
 const int INTERVAL = 60000;
+
 String MYAPIKEY = ""; // API KEY
 char* ssid = "";      // WIFI AP SSID
 char* password = "";  // WIFI AP PASSWORD
 const int RATIO = 10;
+
+//#define PLAIVE_SERVER_ENABLE
+#define THINGSPEAK_SERVER_ENABLE
+
 boolean wifi_ready;
 String status;
 
