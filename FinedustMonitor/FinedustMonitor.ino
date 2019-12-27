@@ -55,7 +55,7 @@ unsigned long mark = 0;
 boolean got_interval = false;
   
 int pm25i, pm10i;
-
+//아두이노가 반복적으로 작동하는 부분 (Where Arduino works repeatedly.)
 void loop() {
   if (millis() > mark) {
     mark = millis() + INTERVAL;
