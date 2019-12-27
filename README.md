@@ -4,7 +4,7 @@ Finedust monitoring device powered by NodeMCU.
 ![Final Product](20191212_085317.jpg)
 
 ## What's New
-### December 25, 2019
+### December 27, 2019
 [Now supports [Channel Status Updates] in ThingSpeak](https://thingspeak.com/channels/920137) : Updated [FinedustMonitorWithGPS.ino](https://github.com/happybono/FinedustMonitor/commit/2c67b2f0da2b040965968acb8d0f28a61f4c0c7f "/FinedustMonitor/FinedustMonitor.ino"), [server.ino](https://github.com/happybono/FinedustMonitor/commit/0f668a0b3ce72a1ad0b89f1f80e4df6fb47ed87a "/FinedustMonitor/server.ino")
 
 ## Specifications
