@@ -32,7 +32,7 @@ void do_dust(char c, void (*function)(int, int)) {
           stat = 1;
        }
        else {
-          Serial.println("Eh? wrong tailer");
+          //Serial.println("Eh? wrong tailer");
        }
        cnt = 0;
        int pm25 = buf[0] + 256*buf[1];
