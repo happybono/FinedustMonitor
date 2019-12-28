@@ -1,10 +1,10 @@
-> [Please note] </br>
-This project doesn't support GPS and realtime location tracking capability. For a project that supports GPS and realtime location tracking, please visit the following link : https://github.com/happybono/FinedustMonitorWithGPS
-
 # FinedustMonitor
 Finedust monitoring device powered by NodeMCU. 
 
 ![Final Product](20191212_085317.jpg)
+
+> [Please note] </br>
+This project doesn't support GPS and realtime location tracking capability. For a project that supports GPS and realtime location tracking, please visit the following link : https://github.com/happybono/FinedustMonitorWithGPS
 
 ## What's New
 ### December 27, 2019
