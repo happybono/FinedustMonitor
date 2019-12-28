@@ -11,7 +11,7 @@ Finedust monitoring device powered by NodeMCU.
 ### Scenarios
 * Measuring the finedust contamination level in the air in a real time and display on the OLED Screen. 
 * Measuring the current temperature.
-* Refining data and synchronize with the web-based cloud services. (e.g. ThingSpeak, Plaive) 
+* Refining data and synchronize with the web-based cloud service. (e.g. [ThingSpeak](https://www.thingspeak.com/), [Plaive](https://plaive.10make.com/))
 
 ### Connections
 * 1 x Micro-USB
