@@ -48,7 +48,7 @@ void got_dust(int pm25, int pm10) {
 }
 
 void do_interval() {
-  if (wifi_ready) do_server(MYAPIKEY, int(pm25s.getMedian()), int(pm10s.getMedian()),get_temperature());
+  if (wifi_ready) do_server(MYAPIKEY, int(pm25s.getMedian()), int(pm10s.getMedian()), get_temperature());
 }
 
 unsigned long mark = 0;
