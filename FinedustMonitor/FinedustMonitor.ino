@@ -57,9 +57,30 @@ boolean got_interval = false;
 int pm25i, pm10i;
 //아두이노가 반복적으로 작동하는 부분 (Where Arduino works repeatedly.)
 void loop() {
-  if (millis() > mark) {
-    mark = millis() + INTERVAL;
-    got_interval = true;
+  if (ss.available() <= 0) {
+    Serial.println("SIGNAL STATUS : WEAK");
+    s_map_x = String(map_x, 6);
+    s_map_y = String(map_y, 6);
+  }
+  else {
+    while (ss.available() > 0) {
+      Serial.println("SIGNAL STATUS : GREAT");
+      if (gps.encode(ss.read())) {
+        Serial.println("GPS READ");
+        Serial.println(ss.read());
+        if (gps.location.isValid()) {
+          Serial.println("LOCATION : GREAT");
+          map_x = gps.location.lat();
+          map_y = gps.location.lng();
+          Serial.println(String(map_x, 6));
+          Serial.println(String(map_y, 6));
+          Serial.println(gps.satellites.value());
+        }
+      }
+      s_map_x = String(map_x, 6);
+      s_map_y = String(map_y, 6);
+      yield();
+    }
   }
   while (dust.available() > 0) {
     do_dust(dust.read(), got_dust);
@@ -117,19 +138,19 @@ void loop() {
         status = "Very Good (2) : The air pollution pose minimal risk to exposed persons. Conditions very good for outdoor activities.";
       }
       else if (pm25i == 3) {
-        status = "Moderate (3) : Air quality is acceptable. Air pollution can endanger people at risk. Conditions good for outdoor activities.";
+        status = "Satisfactory (3) : Air quality is average. The air pollution pose a threat for people at risk, which may experience health effects. Other people should limit spending time outdoors, especially when they experience symptoms such as cough or sore throat.";
       }
       else if (pm25i == 4) {
-        status = "Satisfactory (4) : Air quality is average. The air pollution pose a threat for people at risk, which may experience health effects. Other people should limit spending time outdoors, especially when they experience symptoms such as cough or sore throat.";
+        status = "Bad (4) : Air quality is bad. People at risk should avoid to go outside. Not recommended for outdoor activities."
       }
       else if (pm25i == 5) {
         status = "Bad (5) : Air quality is bad. People at risk should avoid to go outside. Not recommended for outdoor activities.";
       }
       else if (pm25i == 6) {
-        status = "Severe (6) : Air quality is severe. People at risk should be avoided to go outside and should limit the outdoor activities to minimum. Outdoor activities are discouraged.";
+        status = "Very Bad (6) : Air quality is very bad. People at risk should avoid to go outside. Not recommended for outdoor activities.";
       }
       else if (pm25i == 7) {
-        status = "Hazardous (7) : The quality of air is worst and dangerous. People at risk should be avoided to go outside and should limit the outdoor activities to minimum. Outdoor activities are strongly discouraged.";
+        status = "Hazardous (7) : The quality of air is worst and dangerous. People at risk should be avoided to go outside and should limit the outdoor activities to minimum. Outdoor activities are discouraged.";
       }
     } else if (pm25i < pm10i) {
       if (pm10i == 1) {
@@ -139,19 +160,19 @@ void loop() {
         status = "Very Good (2) : The air pollution pose minimal risk to exposed persons. Conditions very good for outdoor activities.";
       }
       else if (pm10i == 3) {
-        status = "Moderate (3) : Air quality is acceptable. Air pollution can endanger people at risk. Conditions good for outdoor activities.";
+        status = "Satisfactory (3) : Air quality is average. The air pollution pose a threat for people at risk, which may experience health effects. Other people should limit spending time outdoors, especially when they experience symptoms such as cough or sore throat.";
       }
       else if (pm10i == 4) {
-        status = "Satisfactory (4) : Air quality is average. The air pollution pose a threat for people at risk, which may experience health effects. Other people should limit spending time outdoors, especially when they experience symptoms such as cough or sore throat.";
+        status = "Bad (4) : Air quality is bad. People at risk should avoid to go outside. Not recommended for outdoor activities.";
       }
       else if (pm10i == 5) {
         status = "Bad (5) : Air quality is bad. People at risk should avoid to go outside. Not recommended for outdoor activities.";
       }
       else if (pm10i == 6) {
-        status = "Severe (6) : Air quality is severe. People at risk should be avoided to go outside and should limit the outdoor activities to minimum. Outdoor activities are discouraged.";
+        status = "Very Bad (6) : Air quality is very bad. People at risk should avoid to go outside. Not recommended for outdoor activities.";
       }
       else if (pm10i == 7) {
-        status = "Hazardous (7) : The quality of air is worst and dangerous. People at risk should be avoided to go outside and should limit the outdoor activities to minimum. Outdoor activities are strongly discouraged.";
+        status = "Hazardous (7) : The quality of air is worst and dangerous. People at risk should be avoided to go outside and should limit the outdoor activities to minimum. Outdoor activities are discouraged.";
       }
     }
   }
