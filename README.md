@@ -1,5 +1,5 @@
 # FinedustMonitor
-Finedust monitoring device powered by NodeMCU. 
+Finedust (air pollution) monitoring station. Air pollution monitoring channel updates once per every minutes with PM10.0, PM2.5 readings from Nova PM (SDS011) Sensor. 
 
 ![Final Product](20191212_085317.jpg)
 
