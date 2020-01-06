@@ -57,15 +57,53 @@ boolean got_interval = false;
 int pm25i, pm10i;
 //아두이노가 반복적으로 작동하는 부분 (Where Arduino works repeatedly.)
 void loop() {
-  if (millis() > mark) {
-    mark = millis() + INTERVAL;
-    got_interval = true;
+  if (ss.available() <= 0) {
+    Serial.println("SIGNAL STATUS : WEAK");
+    s_map_x = String(map_x, 6);
+    s_map_y = String(map_y, 6);
+  }
+  else {
+    while (ss.available() > 0) {
+      Serial.println("SIGNAL STATUS : GREAT");
+      if (gps.encode(ss.read())) {
+        Serial.println("GPS READ");
+        Serial.println(ss.read());
+        if (gps.location.isValid()) {
+          Serial.println("LOCATION : GREAT");
+          map_x = gps.location.lat();
+          map_y = gps.location.lng();
+          Serial.println(String(map_x, 6));
+          Serial.println(String(map_y, 6));
+          Serial.println(gps.satellites.value());
+        }
+      }
+      s_map_x = String(map_x, 6);
+      s_map_y = String(map_y, 6);
+      yield();
+    }
   }
   while (dust.available() > 0) {
     do_dust(dust.read(), got_dust);
     yield();                                          //loop 에서 while 문을 사용하는 경우 yield 를 포함해주어야 합니다.
 
-    if (8 >= int(pm25s.getMedian()) && int(pm25s.getMedian()) >= 0) {
+
+    /* AQI (실시간 대기질 지수) 등급 분류를 위한 코드입니다.
+       실시간 대기질 기준 수치는 국제 표준인 WHO 대기질 수치 기준으로 분류합니다.
+
+       http://www.euro.who.int/__data/assets/pdf_file/0005/78638/E90038.pdf
+       https://airnow.gov/index.cfm?action=aqibasics.aqi */
+
+       
+    // 초미세먼지 AQI (실시간 대기질 지수) 등급을 분류합니다.
+    //   0 이상   8 이하 : 1
+    //   9 이상  16 이하 : 2
+    //  17 이상  26 이하 : 3
+    //  27 이상  34 이하 : 4
+    //  35 이상  43 이하 : 5
+    //  44 이상  51 이하 : 6
+    //  52 이상  ∞  이하 : 7
+
+    if (8 >= int(pm25s.getMedian()) && int(pm25s.getMedian()) >= 0) { 
       pm25i = 1;
     }
     else if (16 >= int(pm25s.getMedian()) && int(pm25s.getMedian()) >= 9) {
@@ -83,9 +121,19 @@ void loop() {
     else if (51 >= int(pm25s.getMedian()) && int(pm25s.getMedian()) >= 44) {
       pm25i = 6;
     }
-    else if (60 >= int(pm25s.getMedian()) && int(pm25s.getMedian()) >= 52) {
+    else if (int(pm25s.getMedian()) >= 52) {
       pm25i = 7;
     }
+
+
+    // 미세먼지 AQI (실시간 대기질 지수) 등급을 분류합니다.
+    //   0 이상   8 이하 : 1
+    //   9 이상  16 이하 : 2
+    //  17 이상  51 이하 : 3
+    //  52 이상  68 이하 : 4
+    //  69 이상  84 이하 : 5
+    //  85 이상 101 이하 : 6
+    // 102 이상  ∞  이하 : 7
 
     if (8 >= int(pm10s.getMedian()) && int(pm10s.getMedian()) >= 0) {
       pm10i = 1;
@@ -105,11 +153,16 @@ void loop() {
     else if (101 >= int(pm10s.getMedian()) && int(pm10s.getMedian()) >= 85) {
       pm10i = 6;
     }
-    else if (120 >= int(pm10s.getMedian()) && int(pm10s.getMedian()) >= 102) {
+    else if (int(pm10s.getMedian()) >= 102) {
       pm10i = 7;
     }
 
-     if (pm25i >= pm10i) {
+    /* ThingSpeak 채널 내 Status Update (상태 업데이트) 영역에 표시되는 문구이므로,  
+        종합적인 정보 표현을 위해 초미세먼지와 미세먼지 등급을 비교 한 후 
+        두 가지 중 높은 등급 기준으로 경고 혹은 권고메시지를 표시합니다. */
+
+    // 분류된 초미세먼지 등급이 미세먼지 등급보다 같거나 높은 경우, 초미세먼지 등급을 기준으로 내용을 표시하기 위하여 아래의 문자열을 status 변수에 저장합니다. 
+    if (pm25i >= pm10i) {
       if (pm25i == 1) {
         status = "Excellent (1) : The air quality is excellent. The air pollution pose no threat. The conditions ideal for outdoor activities.";
       }
@@ -119,7 +172,7 @@ void loop() {
       }
 
       else if (pm25i == 3) {
-        status = "Moderate (3) : Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.";
+        status = "Moderate (3) : Air quality is acceptable. however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.";
       }
 
       else if (pm25i == 4) {
@@ -127,7 +180,7 @@ void loop() {
       }
 
       else if (pm25i == 5) {
-        status = "Bad (5) : Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects. People at risk should avoid to go outside. Not recommended for outdoor activities.";
+        status = "Bad (5) : Everyone may begin to experience health effects, members of sensitive groups may experience more serious health effects. People at risk should avoid to go outside. Not recommended for outdoor activities.";
       }
 
       else if (pm25i == 6) {
@@ -137,6 +190,8 @@ void loop() {
       else if (pm25i == 7) {
         status = "Hazardous (7) : Health warnings of emergency conditions. People at risk should be avoided to go outside and should limit the outdoor activities to minimum. Outdoor activities are strongly discouraged.";
       }
+
+    // 분류된 미세먼지 등급이 초미세먼지 등급보다 높은 경우, 미세먼지 등급을 기준으로 내용을 표시하기 위하여 아래의 문자열을 status 변수에 저장합니다.
     } else if (pm25i < pm10i) {
       if (pm10i == 1) {
         status = "Excellent (1) : The air quality is excellent. The air pollution pose no threat. The conditions ideal for outdoor activities.";
@@ -147,7 +202,7 @@ void loop() {
       }
 
       else if (pm10i == 3) {
-        status = "Moderate (3) :  Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.";
+        status = "Moderate (3) :  Air quality is acceptable. however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.";
       }
 
       else if (pm10i == 4) {
@@ -155,7 +210,7 @@ void loop() {
       }
 
       else if (pm10i == 5) {
-        status = "Bad (5) : Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects. People at risk should avoid to go outside. Not recommended for outdoor activities.";
+        status = "Bad (5) : Everyone may begin to experience health effects, members of sensitive groups may experience more serious health effects. People at risk should avoid to go outside. Not recommended for outdoor activities.";
       }
 
       else if (pm10i == 6) {
