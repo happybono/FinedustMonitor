@@ -13,6 +13,9 @@ This project doesn't support GPS and realtime location tracking capability. For 
 ### January 25, 2020
 ["Latest PM sensor readings" plugin added in ThingSpeak.](https://github.com/happybono/FinedustMonitor/tree/master/Plugins/StatusUpdates)
 
+### January 26, 2020
+Various bugs fixed.
+
 ## Specifications
 ### Scenarios
 * Measuring the finedust contamination level in the air in a real time and display on the OLED Screen. 
