@@ -19,12 +19,12 @@
       console.log("PM sensor data: ", data);
       // get the data points
       p_pm10 = parseFloat(data.field1);
-      p_pm25 = parseFloat(data.field3);
+      p_pm25 = parseFloat(data.field2);
       p_timestamp = new Date(data.created_at);
       var timestamp = p_timestamp.toLocaleString();
       // update page
-      document.getElementById('pm10').innerHTML = 'PM<sub>10</sub>: ' + p_pm10 + ' µg/m<sup>3</sup> (' + (p_pm10 / 50 * 100).toFixed(0) + '%)';
-      document.getElementById('pm25').innerHTML = 'PM<sub>2.5</sub>: ' + p_pm25 + ' µg/m<sup>3</sup> (' + (p_pm25 / 20 * 100).toFixed(0) + '%)';
+      document.getElementById('pm10').innerHTML = 'PM<sub>10</sub> : ' + p_pm10 + ' ㎍ / ㎥ (' + (p_pm10 / 50 * 100).toFixed(0) + '%)';
+      document.getElementById('pm25').innerHTML = 'PM<sub>2.5</sub> : ' + p_pm25 + ' ㎍ / ㎥ (' + (p_pm25 / 20 * 100).toFixed(0) + '%)';
       document.getElementById('timestamp').innerHTML = '@ ' + timestamp;
     });
   }
