@@ -34,7 +34,7 @@ Various bugs fixed.
 ### Battery life 
 * Up to 24 hours of typical device usage.
 
-## Apparatus (Equipments)
+## Apparatus (Equipment)
 ### Platform
 * ESP8266 NodeMCU
 
