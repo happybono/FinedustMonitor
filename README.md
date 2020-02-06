@@ -61,5 +61,5 @@ Various bugs fixed.
 * ThingSpeak (https://thingspeak.com/)
 * Plaive (https://plaive.10make.com/)
 
-## Drivers / References
+## Drivers
 Please install https://github.com/squix78/esp8266-oled-ssd1306
