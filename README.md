@@ -21,7 +21,7 @@ Various bugs fixed.
 
 ## Specifications
 ### Scenarios
-* Measuring the finedust contamination level in the air in a real time and display on the OLED Screen. 
+* Measuring the fine dust contamination level in the air in real time. The value is displayed on the OLED Screen, and updated every second.
 * Measuring the current temperature.
 * Refining data and synchronize with the web-based cloud service. (e.g. [ThingSpeak](https://www.thingspeak.com/), [Plaive](https://plaive.10make.com/))
 
