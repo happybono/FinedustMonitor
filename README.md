@@ -1,5 +1,5 @@
 # FinedustMonitor
-Finedust (air pollution) monitoring station. Air pollution monitoring channel updates once per every minutes with PM10.0, PM2.5 readings from Nova PM (SDS011) Sensor. 
+Fine dust (air pollution) monitoring station. Air pollution monitoring channel updates once every minute with PM10.0 and PM2.5 readings from the Nova PM (SDS011) Sensor.  
 
 > **[Please note]** </br>
 This project doesn't support GPS and realtime location tracking capability. For a project that supports GPS and realtime location tracking, please visit the following link : https://github.com/happybono/FinedustMonitorWithGPS
@@ -7,6 +7,9 @@ This project doesn't support GPS and realtime location tracking capability. For 
 ![Final Product](20191212_085317.jpg)
 
 ## What's New
+### November 24, 2019
+Initial Release.
+
 ### December 27, 2019
 [Now supports [Channel Status Updates] in ThingSpeak](https://thingspeak.com/channels/920137) : Updated [FinedustMonitorWithGPS.ino](https://github.com/happybono/FinedustMonitor/commit/2c67b2f0da2b040965968acb8d0f28a61f4c0c7f "/FinedustMonitor/FinedustMonitor.ino"), [server.ino](https://github.com/happybono/FinedustMonitor/commit/0f668a0b3ce72a1ad0b89f1f80e4df6fb47ed87a "/FinedustMonitor/server.ino")
 
