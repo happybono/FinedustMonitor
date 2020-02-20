@@ -19,6 +19,9 @@ Initial Release.
 ### January 26, 2020
 Various bugs fixed.
 
+### February 20, 2020
+["Email Alert" function added as ThingSpeak Analysis plug-in.](https://github.com/happybono/FinedustMonitor/blob/master/Plugins/Email/EmailNotifier.m) 
+
 ## Specifications
 ### Scenarios
 * Measuring the fine dust contamination level in the air in real time. The value is displayed on the OLED Screen, and updated every second.
