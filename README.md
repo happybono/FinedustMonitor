@@ -20,7 +20,7 @@ Initial Release.
 Various bugs fixed.
 
 ### February 20, 2020
-["Email Alert" function added as ThingSpeak Analysis plug-in.](https://github.com/happybono/FinedustMonitor/blob/master/Plugins/Email/EmailNotifier.m) 
+["Email Alert" function added as a ThingSpeak Analysis plug-in.](https://github.com/happybono/FinedustMonitor/blob/master/Plugins/Email/EmailNotifier.m) 
 
 ## Specifications
 ### Scenarios
