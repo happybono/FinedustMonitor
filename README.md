@@ -68,4 +68,4 @@ Various bugs fixed.
 Please install https://github.com/squix78/esp8266-oled-ssd1306
 
 ## References
-Not applicable.
+* Tillaart, Rob 2018, RobTillaart/Arduino, GitHub, RobTillaart, viewed 23 February 2020, <https://github.com/RobTillaart/Arduino/blob/master/libraries/RunningMedian/RunningMedian.cpp>.
