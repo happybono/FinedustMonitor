@@ -23,7 +23,7 @@ This project doesn't support GPS and realtime location tracking capability. For 
 > ["Email Alert" function added as a ThingSpeak Analysis plug-in.](https://github.com/happybono/FinedustMonitor/blob/master/Plugins/Email/EmailNotifier.m) 
 
 ### February 24, 2020
-> Generated a QR code for faster and more convenient access to the ThingSpeak dashboard. <br><br>
+> [Generated a QR code for faster and more convenient access to the ThingSpeak dashboard.](https://github.com/happybono/FinedustMonitor/blob/master/QRCode.png) <br><br>
 > <img src="https://github.com/happybono/FinedustMonitor/blob/master/QRCode.png" width="251" alt="QRCode"/>
 
 ## Specifications
