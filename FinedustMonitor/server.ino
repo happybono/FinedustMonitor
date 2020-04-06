@@ -24,6 +24,12 @@ void do_server_plaive(String api_key, int pm25, int pm10, float temperature) {
   //contentType= "application/x-www-form-urlencoded";
 
   //서버 통신 공식 client.println 을 사용하여야 합니다.
+  
+  /*  Write Data with Get :
+   *  
+   *  Usage :
+   *  https://data.plaive.10make.com/insert.php?api_key=<write_api_key>&field1=123 */
+     
   if(client.connect(host_plaive, httpPort)){
     Serial.println("connected");
     client.print("GET /insert.php?");
@@ -52,6 +58,13 @@ void do_server_thingspeak(String api_key, int pm25, int pm10, float temperature,
   //contentType= "application/x-www-form-urlencoded";
 
   //서버 통신 공식 client.println 을 사용하여야 합니다.
+
+  /*  Write Data with Get :
+   *  https://www.mathworks.com/help/thingspeak/writedata.html
+   *
+   *  Usage : 
+   *  https://api.thingspeak.com/update?api_key=<write_api_key>&field1=123 */
+     
   if(client.connect(host_thingspeak, httpPort)){
     Serial.println("connected");
     client.print("GET /update?");
