@@ -26,6 +26,11 @@ This project doesn't support GPS and realtime location tracking capability. For 
 > [Generated a QR code for faster and more convenient access to the ThingSpeak dashboard.](https://github.com/happybono/FinedustMonitor/blob/master/QRCode.png) <br><br>
 > <img src="https://github.com/happybono/FinedustMonitor/blob/master/QRCode.png" width="251" alt="QRCode"/>
 
+### May 28, 2020
+> [Added 3D modeled housing file.](https://github.com/happybono/FinedustMonitor/blob/master/3DModels/SDS011-Housing.stl)
+
+<img src="https://github.com/happybono/FinedustMonitor/blob/master/3DModels/SDS011-Housing.png" alt="3DModel"/>
+
 ## Specifications
 ### Scenarios
 * Measuring the fine dust contamination level in the air in real time. The value is displayed on the OLED Screen, and updated every second.
