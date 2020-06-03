@@ -31,7 +31,7 @@ This project doesn't support GPS and realtime location tracking capability. For 
 
 <img src="https://github.com/happybono/FinedustMonitor/blob/master/3DModels/SDS011-Housing.png" alt="3DModel"/>
 
-### June 4, 2020
+### June 04, 2020
 > Programmed and attached an NFC Tag Sticker for faster and more convenient access to the ThingSpeak dashboard.
 
 ## Specifications
