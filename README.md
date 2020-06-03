@@ -72,6 +72,16 @@ This project doesn't support GPS and realtime location tracking capability. For 
 * Output : DC-5V / 0.6A
 * Capacity : 2,300 mAh
 
+### Anisotropic Rubber Plate Magnet
+* Dimension : 300.0 mm × 300.0 mm
+* Thickness : 2T (2mm)
+* Quantity : 2 EA
+
+### Circular NFC Tag Sticker (N-Tag 216)
+* Size : 25.0 mm
+* Capacity : 926 Byte
+* This should be programmed to automatically opening the ThingSpeak Dashboard when the NFC Capable device has contacting on the NFC Tag Sticker.
+
 ## Data Refinement / Synchronization
 * ThingSpeak (https://thingspeak.com/)
 * Plaive (https://plaive.10make.com/)
