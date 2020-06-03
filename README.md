@@ -31,6 +31,9 @@ This project doesn't support GPS and realtime location tracking capability. For 
 
 <img src="https://github.com/happybono/FinedustMonitor/blob/master/3DModels/SDS011-Housing.png" alt="3DModel"/>
 
+### June 4, 2020
+> Programmed and attached an NFC Tag Sticker for faster and more convenient access to the ThingSpeak dashboard.
+
 ## Specifications
 ### Scenarios
 * Measuring the fine dust contamination level in the air in real time. The value is displayed on the OLED Screen, and updated every second.
