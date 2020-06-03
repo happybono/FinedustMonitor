@@ -22,10 +22,6 @@ This project doesn't support GPS and realtime location tracking capability. For 
 ### February 20, 2020
 > ["Email Alert" function added as a ThingSpeak Analysis plug-in.](https://github.com/happybono/FinedustMonitor/blob/master/Plugins/Email/EmailNotifier.m) 
 
-### February 24, 2020
-> [Generated a QR code for faster and more convenient access to the ThingSpeak dashboard.](https://github.com/happybono/FinedustMonitor/blob/master/QRCode.png) <br><br>
-> <img src="https://github.com/happybono/FinedustMonitor/blob/master/QRCode.png" width="251" alt="QRCode"/>
-
 ### May 28, 2020
 > [Added 3D modeled housing file.](https://github.com/happybono/FinedustMonitor/blob/master/3DModels/SDS011-Housing.stl)
 
