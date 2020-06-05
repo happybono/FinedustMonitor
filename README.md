@@ -4,7 +4,7 @@ Fine dust (air pollution) monitoring station. Air pollution monitoring channel u
 > **[Please note]** </br>
 This project doesn't support GPS and realtime location tracking capability. For a project that supports GPS and realtime location tracking, please visit the following link : https://github.com/happybono/FinedustMonitorWithGPS
 
-![Final Product](20191212_085317.jpg)
+![Final Product](FineDustMonitor_Device.jpg)
 
 ## What's New
 ### November 24, 2019
