@@ -25,7 +25,7 @@ This project doesn't support GPS and realtime location tracking capability. For 
 ### May 28, 2020
 > [Added 3D modeled housing file.](https://github.com/happybono/FinedustMonitor/blob/master/3DModels/SDS011-Housing.stl)
 
-<img src="https://github.com/happybono/FinedustMonitor/blob/master/3DModels/SDS011-Housing.png" alt="3DModel"/>
+> <img src="https://github.com/happybono/FinedustMonitor/blob/master/3DModels/SDS011-Housing.png" alt="3DModel"/>
 
 ### June 04, 2020
 > Programmed and attached an NFC Tag Sticker for faster and more convenient access to the ThingSpeak dashboard.
