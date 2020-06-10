@@ -7,27 +7,29 @@ This project doesn't support GPS and realtime location tracking capability. For 
 ![Final Product](FineDustMonitor_Device.jpg)
 
 ## What's New
-### November 24, 2019
+### v1.0
+#### November 24, 2019
 > Initial Release.
 
-### December 27, 2019
+#### December 27, 2019
 > [Now supports [Channel Status Updates] in ThingSpeak](https://thingspeak.com/channels/920137) : Updated [FinedustMonitorWithGPS.ino](https://github.com/happybono/FinedustMonitor/commit/2c67b2f0da2b040965968acb8d0f28a61f4c0c7f "/FinedustMonitor/FinedustMonitor.ino"), [server.ino](https://github.com/happybono/FinedustMonitor/commit/0f668a0b3ce72a1ad0b89f1f80e4df6fb47ed87a "/FinedustMonitor/server.ino")
 
-### January 25, 2020
+#### January 25, 2020
 > ["Latest PM sensor readings" plugin added in ThingSpeak.](https://github.com/happybono/FinedustMonitor/tree/master/Plugins/StatusUpdates)
 
-### January 26, 2020
+#### January 26, 2020
 > Various bugs fixed.
 
-### February 20, 2020
+### v2.0
+#### February 20, 2020
 > ["Email Alert" function added as a ThingSpeak Analysis plug-in.](https://github.com/happybono/FinedustMonitor/blob/master/Plugins/Email/EmailNotifier.m) 
 
-### May 28, 2020
+#### May 28, 2020
 > [Added 3D modeled housing file.](https://github.com/happybono/FinedustMonitor/blob/master/3DModels/SDS011-Housing.stl)
 
 > <img src="https://github.com/happybono/FinedustMonitor/blob/master/3DModels/SDS011-Housing.png" alt="3DModel"/>
 
-### June 04, 2020
+#### June 04, 2020
 > Attached a programmed NFC Tag Sticker for faster and more convenient access to the ThingSpeak dashboard.
 
 ## Specifications
