@@ -33,7 +33,7 @@ This project doesn't support GPS and realtime location tracking capability. For 
 > Attached a programmed NFC Tag Sticker for faster and more convenient access to the ThingSpeak dashboard.
 
 #### June 11, 2020
-> [Fine dust (PM 2.5 and PM 10.0) 3D visualization bar charts added on the ThingSpeak dashboard.](https://github.com/happybono/FinedustMonitorWithGPS/tree/master/Plugins/Visualizations)
+> [Fine dust (PM 2.5 and PM 10.0) 3D visualization bar charts added on the ThingSpeak dashboard.](https://github.com/happybono/FinedustMonitor/tree/master/Plugins/Visualizations)
 
 ## Specifications
 ### Scenarios
