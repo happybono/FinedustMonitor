@@ -32,6 +32,9 @@ This project doesn't support GPS and realtime location tracking capability. For 
 #### June 04, 2020
 > Attached a programmed NFC Tag Sticker for faster and more convenient access to the ThingSpeak dashboard.
 
+#### June 11, 2020
+> [Fine dust (PM 2.5 and PM 10.0) 3D visualization bar charts added on the ThingSpeak dashboard.](https://github.com/happybono/FinedustMonitorWithGPS/tree/master/Plugins/Visualizations)
+
 ## Specifications
 ### Scenarios
 * Measuring the fine dust contamination level in the air in real time. The value is displayed on the OLED Screen, and updated every second.
