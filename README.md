@@ -36,7 +36,7 @@ This project doesn't support GPS and realtime location tracking capability. For 
 > [Fine dust (PM 2.5 and PM 10.0) 3D visualization bar charts added on the ThingSpeak dashboard.](https://github.com/happybono/FinedustMonitor/tree/master/Plugins/Visualizations)
 
 #### June 12, 2020
-> [Various bugs fixed those relates with fine dust (PM 2.5 and PM 10.0) 3D visualization bar charts.](https://github.com/happybono/FinedustMonitor/tree/master/Plugins/Visualizations)
+> [Various bugs fixed those related with fine dust (PM 2.5 and PM 10.0) 3D visualization bar charts.](https://github.com/happybono/FinedustMonitor/tree/master/Plugins/Visualizations)
 
 ## Specifications
 ### Scenarios
