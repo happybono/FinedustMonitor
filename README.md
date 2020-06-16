@@ -38,6 +38,9 @@ This project doesn't support GPS and realtime location tracking capability. For 
 #### June 12, 2020
 > [Various bugs fixed those related with fine dust (PM 2.5 and PM 10.0) 3D visualization bar charts.](https://github.com/happybono/FinedustMonitor/tree/master/Plugins/Visualizations)
 
+#### June 16, 2020
+> [Supports multiple series (PM 2.5 & PM 10) chart as a ThingSpeak plugin.](https://github.com/happybono/FinedustMonitor/tree/master/Plugins/MultiSeriesChart)
+
 ## Specifications
 ### Scenarios
 * Measuring the fine dust contamination level in the air in real time. The value is displayed on the OLED Screen, and updated every second.
