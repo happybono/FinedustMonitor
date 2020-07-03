@@ -44,6 +44,9 @@ This project doesn't support GPS and realtime location tracking capability. For 
 #### June 17, 2020
 > Various bugs fixed.
 
+#### July 03, 2020
+> [Various bugs fixed those related with fine dust (PM 2.5 and PM 10.0) 3D visualization bar charts.](https://github.com/happybono/FinedustMonitor/tree/master/Plugins/Visualizations)
+
 ## Specifications
 ### Scenarios
 * Measuring the fine dust contamination level in the air in real time. The value is displayed on the OLED Screen, and updated every second.
