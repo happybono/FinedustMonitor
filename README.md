@@ -89,7 +89,7 @@ This project doesn't support GPS and realtime location tracking capability. For 
 * Soldering required.
 * D3 : Data, D2 : Clock
 
-### DS18820 Temperature Sensor (Thermometer)
+### DS18B20 Temperature Sensor (Thermometer)
 * Soldering required.
 * D4 : Data
 
