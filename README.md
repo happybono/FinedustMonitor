@@ -14,7 +14,10 @@ This project doesn't support GPS and realtime location tracking capability. For 
 
 ![Final Product](FineDustMonitor_Device.jpg)
 
-## What's New
+## What's New   
+<details>
+<summary>Click to Expand</summary>
+  
 ### v1.0
 #### November 24, 2019
 > Initial Release.
@@ -57,6 +60,8 @@ This project doesn't support GPS and realtime location tracking capability. For 
 
 #### July 08, 2020
 > [A defect that prevented measurement values from being uploaded under certain environmental conditions has been fixed.](https://github.com/happybono/FinedustMonitor/blob/master/FinedustMonitor/FinedustMonitor.ino)
+</details>
+
 
 ## Specifications
 ### Scenarios
