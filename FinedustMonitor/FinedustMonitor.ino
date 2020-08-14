@@ -15,9 +15,9 @@ RunningMedian pm10s = RunningMedian(19);
 
 const int INTERVAL = 60000;
 
-String MYAPIKEY = ""; // API KEY
-char* ssid = "";      // WIFI AP SSID
-char* password = "";  // WIFI AP PASSWORD
+String api_key = ""; // API KEY
+char* ssid = "";
+char* password = "";
 const int RATIO = 10;
 
 //#define PLAIVE_SERVER_ENABLE
@@ -48,7 +48,18 @@ void got_dust(int pm25, int pm10) {
 }
 
 void do_interval() {
-  if (wifi_ready) do_server(MYAPIKEY, int(pm25s.getMedian()), int(pm10s.getMedian()), get_temperature());
+  if (wifi_ready) {
+#ifdef PLAIVE_SERVER_ENABLE
+    do_server_plaive(api_key, int(pm25s.getMedian()), int(pm10s.getMedian()), get_temperature());
+#else
+#ifdef THINGSPEAK_SERVER_ENABLE
+    Serial.println("dst: pm25=" + String(int(pm25s.getMedian())) + " / pm10=" + String(int(pm10s.getMedian())) + "/ s=" + String(status));
+    do_server_thingspeak(api_key, int(pm25s.getMedian()), int(pm10s.getMedian()), get_temperature(), status);
+#else
+    do_server_default(api_key, int(pm25s.getMedian()), int(pm10s.getMedian()), get_temperature());
+#endif
+#endif
+  }                                                    //wifi is ok
 }
 
 unsigned long mark = 0;
@@ -76,7 +87,7 @@ void loop() {
        https://airnow.gov/index.cfm?action=aqibasics.aqi */
 
 
-    // 초미세먼지 AQI (실시간 대기질 지수) 등급을 분류합니다.
+     // 초미세먼지 AQI (실시간 대기질 지수) 등급을 분류합니다.
     //   0 이상   8 이하 : 1
     //   9 이상  16 이하 : 2
     //  17 이상  26 이하 : 3
@@ -134,13 +145,11 @@ void loop() {
         종합적인 정보 표현을 위해 초미세먼지와 미세먼지 등급을 비교 한 후
         두 가지 중 높은 등급 기준으로 경고 혹은 권고메시지를 표시합니다. */
 
-    // 분류된 초미세먼지 등급이 미세먼지 등급보다 같거나 높은 경우, 초미세먼지 등급을 기준으로.
-    // 분류된 미세먼지 등급이 초미세먼지 등급보다 높은 경우, 미세먼지 등급을 기준으로.
-    // 내용을 표시하기 위하여 아래의 문자열을 status 변수에 저장합니다.
+    // 분류된 초미세먼지 등급이 미세먼지 등급보다 같거나 높은 경우, 초미세먼지 등급을 기준으로 내용을 표시하기 위하여 아래의 문자열을 status 변수에 저장합니다.
 
     switch ((pm25i >= pm10i) ? pm25i : pm10i) {
       case 1:
-        status = "Excellent (1) : The air quality is excellent. The air pollution pose no threat. The conditions ideal for outdoor activities.";
+        status = "Excellent (1) : The air quality is excellent. The air pollution pose no threat. Conditions ideal for outdoor activities.";
         break;
 
       case 2:
@@ -183,4 +192,3 @@ void loop() {
   }
   yield();
 }
-
