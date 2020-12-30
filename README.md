@@ -60,6 +60,10 @@ This project doesn't support GPS and realtime location tracking capability. For 
 
 #### July 08, 2020
 > [A defect that prevented measurement values from being uploaded under certain environmental conditions has been fixed.](https://github.com/happybono/FinedustMonitor/blob/master/FinedustMonitor/FinedustMonitor.ino)
+
+#### December 30, 2020
+> [Various bugs fixed.](https://github.com/happybono/FinedustMonitor/blob/master/FinedustMonitor/FinedustMonitor.ino)
+
 </details>
 
 
