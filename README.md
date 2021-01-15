@@ -119,8 +119,20 @@ This project doesn't support GPS and realtime location tracking capability. For 
 * ThingSpeak (https://thingspeak.com/)
 * Plaive (https://plaive.10make.com/)
 
-## Drivers
-Please install https://github.com/squix78/esp8266-oled-ssd1306
+## Libraries Used
+### DallasTemperature
+This library supports the following devices :
+
+DS18B20 <br>
+DS18S20 - Please note there appears to be an issue with this series. <br>
+DS1822 <br>
+DS1820 <br>
+MAX31820 <br>
+https://github.com/milesburton/Arduino-Temperature-Control-Library
+
+### SSD1306 (0.96") OLED Display
+This is a driver for SSD1306 128x64, 128x32, 64x48 and 64x32 OLED displays running on the Arduino/ESP8266 & ESP32 and mbed-os platforms. Can be used with either the I2C or SPI version of the display. <br>
+https://www.github.com/ThingPulse/esp8266-oled-ssd1306
 
 ## References
 * Rob Tillaart 2018, RobTillaart/Arduino, GitHub, RobTillaart, viewed 23 February 2020, <https://github.com/RobTillaart/Arduino/blob/master/libraries/RunningMedian/RunningMedian.cpp>.
