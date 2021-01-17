@@ -80,7 +80,7 @@ This project doesn't support GPS and realtime location tracking capability. For 
 * IEEE 802.11 b/g/n Wi-Fi technology.
 
 ### Battery life 
-* Up to 24 hours of typical device usage.
+* Up to 24 hours (1 day) of typical device usage.
 * Testing consisted of full-time active use until complete battery discharge. 
 * Wi-Fi was connected to a network.
 * Syncs data once every minute with PM 10.0 and PM 2.5 readings from the Nova PM (SDS011) Sensor and Temperature reading from the DS18820 Temperature Sensor.
@@ -114,6 +114,9 @@ This project doesn't support GPS and realtime location tracking capability. For 
 * Capacity : 926 Byte
 * This should be programmed to automatically opening the ThingSpeak Dashboard when the NFC Capable device has contacting on the NFC Tag Sticker.
 * https://www.amazon.com/GoToTags-Blank-White-Metal-NFC/dp/B00TRL774A/ref=sr_1_5?dchild=1&keywords=ntag216&qid=1591593422&sr=8-5
+
+## Schematics
+![Schematics Diagram](FineDustMonitor_SCHEMDiag.png)
 
 ## Data Refinement / Synchronization
 * ThingSpeak (https://thingspeak.com/)
