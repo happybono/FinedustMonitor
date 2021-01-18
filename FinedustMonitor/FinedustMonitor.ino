@@ -173,7 +173,7 @@ void loop() {
         break;
 
       case 7:
-        status = "Hazardous (7) : People at risk should be avoided to go outside and should limit the outdoor activities to minimum. Outdoor activities are strongly discouraged.";
+        status = "Hazardous (7) : People at risk should avoid going outside and should limit the outdoor activities to minimum. Outdoor activities are strongly discouraged.";
         break;
     }
 
