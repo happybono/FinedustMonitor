@@ -88,7 +88,7 @@ This project doesn't support GPS and realtime location tracking capability. For 
 
 ## Apparatus (Equipment)
 ### Platform
-* * NodeMCU ESP8266-12E
+* NodeMCU ESP8266-12E
 
 ### SDS011 Dust Sensor
 * Soldering required.
