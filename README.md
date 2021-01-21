@@ -84,7 +84,7 @@ This project doesn't support GPS and realtime location tracking capability. For 
 * Testing consisted of full-time active use until complete battery discharge. 
 * Wi-Fi was connected to a network.
 * Syncs data once every minute with PM 10.0 and PM 2.5 readings from the Nova PM (SDS011) Sensor and Temperature reading from the DS18820 Temperature Sensor.
-* Battery life may varies significantly with settings, usage and other factors.
+* Battery life may vary significantly with settings, usage and other factors.
 
 ## Apparatus (Equipment)
 ### Platform
