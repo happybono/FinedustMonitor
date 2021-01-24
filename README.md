@@ -137,7 +137,7 @@ https://github.com/milesburton/Arduino-Temperature-Control-Library
 This is a driver for SSD1306 128x64, 128x32, 64x48 and 64x32 OLED displays running on the Arduino/ESP8266 & ESP32 and mbed-os platforms. Can be used with either the I2C or SPI version of the display. <br>
 https://www.github.com/ThingPulse/esp8266-oled-ssd1306
 
-## RunningMedian
+### RunningMedian
 Arduino library to determine the running median by means of a circular buffer.
 
 Running Median looks like a running average with a small but important twist. Running average averages the last N samples while the running median takes the last N samples, sort them and take the middle one, or the average of the middle two.
