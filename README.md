@@ -63,9 +63,10 @@ This project doesn't support GPS and realtime location tracking capability. For 
 
 #### December 30, 2020
 > [Various bugs fixed.](https://github.com/happybono/FinedustMonitor/blob/master/FinedustMonitor/FinedustMonitor.ino)
-
+  
+#### August 23, 2021
+> [Improvements have been made to the "Email Alert" function.](https://github.com/happybono/FinedustMonitorWithGPS/blob/master/Plugins/Email/EmailNotifier.m) 
 </details>
-
 
 ## Specifications
 ### Scenarios
