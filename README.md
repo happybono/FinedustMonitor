@@ -66,6 +66,9 @@ This project doesn't support GPS and realtime location tracking capability. For 
   
 #### August 23, 2021
 > [Improvements have been made to the "Email Alert" function.](https://github.com/happybono/FinedustMonitor/blob/master/Plugins/Email/EmailNotifier.m)
+  
+#### April 16, 2022  
+> [Update to support tightened the rules around query parameters in the ThingSpeak platform.](https://github.com/happybono/FinedustMonitor/commit/9dc5fd89181d5e0b8800c4876f998fc3cb1a10d4)
 </details>
 
 ## Specifications
