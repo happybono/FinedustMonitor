@@ -10,7 +10,7 @@ Fine dust (air pollution) monitoring station. Air pollution monitoring channel u
              
 
 > **[Please note]** </br>
-This project doesn't support GPS and realtime location tracking capability. For a project that supports GPS and realtime location tracking, please visit the following link : https://github.com/happybono/FinedustMonitorWithGPS
+This project does not support GPS and real-time location tracking capability. For a project that supports GPS and real-time location tracking, please visit the following link : https://github.com/happybono/FinedustMonitorWithGPS
 
 ![Final Product](FineDustMonitor_Device.jpg)
 
@@ -68,14 +68,14 @@ This project doesn't support GPS and realtime location tracking capability. For 
 > [Improvements have been made to the "Email Alert" function.](https://github.com/happybono/FinedustMonitor/blob/master/Plugins/Email/EmailNotifier.m)
   
 #### April 16, 2022  
-> [Update to support tightened the rules around query parameters in the ThingSpeak platform.](https://github.com/happybono/FinedustMonitor/commit/9dc5fd89181d5e0b8800c4876f998fc3cb1a10d4)
+> [Update to tighten the rules around query parameters in the ThingSpeak platform.](https://github.com/happybono/FinedustMonitor/commit/9dc5fd89181d5e0b8800c4876f998fc3cb1a10d4)
 </details>
 
 ## Specifications
 ### Scenarios
-* Measuring the fine dust contamination level in the air in real time. The value is displayed on the OLED Screen, and updated every second.
+* Measuring the fine dust contamination level in the air in real time. The value is displayed on the OLED Screen and updated every second.
 * Measuring the current temperature.
-* Refining data and synchronize with the web-based cloud service. (e.g. [ThingSpeak](https://www.thingspeak.com/), [Plaive](https://plaive.10make.com/))
+* Refining data and synchronizing with the web-based cloud service. (e.g. [ThingSpeak](https://www.thingspeak.com/), [Plaive](https://plaive.10make.com/))
 
 ### Connections
 * 1 x Micro-USB
@@ -88,7 +88,7 @@ This project doesn't support GPS and realtime location tracking capability. For 
 * Testing consisted of full-time active use until complete battery discharge. 
 * Wi-Fi was connected to a network.
 * Syncs data once every minute with PM 10.0 and PM 2.5 readings from the Nova PM (SDS011) Sensor and Temperature reading from the DS18820 Temperature Sensor.
-* Battery life may vary significantly with settings, usage and other factors.
+* Battery life may vary significantly with settings, usage, and other factors.
 
 ## Apparatus (Equipment)
 ### Platform
@@ -116,7 +116,7 @@ This project doesn't support GPS and realtime location tracking capability. For 
 ### Circular NFC Tag Sticker (N-Tag 216)
 * Size : 25.0 mm
 * Capacity : 926 Byte
-* This should be programmed to automatically opening the ThingSpeak Dashboard when the NFC Capable device has contacting on the NFC Tag Sticker.
+* This should be programmed to automatically open the ThingSpeak Dashboard when the NFC-capable device comes into contact with the NFC Tag Sticker.
 * https://www.amazon.com/GoToTags-Blank-White-Metal-NFC/dp/B00TRL774A/ref=sr_1_5?dchild=1&keywords=ntag216&qid=1591593422&sr=8-5
 
 ## Schematics
@@ -138,21 +138,21 @@ MAX31820 <br>
 https://github.com/milesburton/Arduino-Temperature-Control-Library
 
 ### SSD1306 (0.96") OLED Display
-This is a driver for SSD1306 128x64, 128x32, 64x48 and 64x32 OLED displays running on the Arduino/ESP8266 & ESP32 and mbed-os platforms. Can be used with either the I2C or SPI version of the display. <br>
+This is a driver for SSD1306 128x64, 128x32, 64x48, and 64x32 OLED displays running on the Arduino/ESP8266 & ESP32 and mbed-os platforms. Can be used with either the I2C or SPI version of the display. <br>
 https://www.github.com/ThingPulse/esp8266-oled-ssd1306
 
 ### RunningMedian
 Arduino library to determine the running median by means of a circular buffer. <br>
 https://github.com/RobTillaart/Arduino/tree/master/libraries/RunningMedian
 
-Running Median looks like a running average with a small but important twist. Running average averages the last N samples while the running median takes the last N samples, sort them and take the middle one, or the average of the middle two.
+Running Median looks like a running average with a small but important twist. Running average averages the last N samples, while the running median takes the last N samples, sorts them, and takes the middle one, or the average of the middle two.
 
 Important differences between running average and running median:
-* Running median will return real data (e.g. a real sample from a sensor) if one uses an odd size of the buffer (preferred). Running average may return a value that is never sampled.
+* Running median will return real data (e.g., a real sample from a sensor) if one uses an odd-sized buffer (preferred). Running average may return a value that is never sampled.
 * Running median will give zero weight to outliers, and 100% to the middle sample, whereas running average gives the same weight to all samples.
-* Running median will give often constant values for some time.
-* As one knows the values in the buffer one can predict to some extend how much the next samples will change the running median.
-* Running median is a bit harder as one needs to keep the values in order to remove the oldest and keep them sorted to be able to select the median.
+* Running median will often give constant values for some time.
+* As one knows the values in the buffer, one can predict to some extent how much the next samples will change the running median.
+* Running median is a bit harder as one needs to keep the values to remove the oldest and keep them sorted to be able to select the median.
 
 ## References
 * Rob Tillaart 2018, RobTillaart/Arduino, GitHub, RobTillaart, viewed 23 February 2020, <https://github.com/RobTillaart/Arduino/blob/master/libraries/RunningMedian/RunningMedian.cpp>.
