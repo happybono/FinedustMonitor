@@ -7,10 +7,10 @@ Fine dust (air pollution) monitoring station. Air pollution monitoring channel u
 <img alt="GitHub Repo Languages" src="https://img.shields.io/github/languages/count/happybono/FineDustMonitor">
 <img alt="GitHub Top Languages" src="https://img.shields.io/github/languages/top/HappyBono/FineDustMonitor">
 </div>
-             
-
-> **[Please note]** </br>
-This project does not support GPS and real-time location tracking capability. For a project that supports GPS and real-time location tracking, please visit the following link : https://github.com/happybono/FinedustMonitorWithGPS
+<br>
+  
+> [!NOTE]
+> This project does not support GPS and real-time location tracking capability. For a project that supports GPS and real-time location tracking, please visit the following link : https://github.com/happybono/FinedustMonitorWithGPS
 
 ![Final Product](FineDustMonitor_Device.jpg)
 
